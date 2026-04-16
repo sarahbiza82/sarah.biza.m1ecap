@@ -15,41 +15,52 @@ knitr::opts_chunk$set(
 
 # sarah.biza.m1ecap
 
-<!-- badges: start -->
-<!-- badges: end -->
+Le premier commit de ce répertoire a été effectué le 16/04/2026 à 09h16.
 
-The goal of sarah.biza.m1ecap is to ...
+Ce package a été développé dans le cadre de l’évaluation M1 ECAP du 16 avril.  
+Il contient un jeu de données Spotify Wrapped 2025 ainsi que plusieurs fonctions d’analyse.
 
 ## Installation
 
-You can install the development version of sarah.biza.m1ecap from [GitHub](https://github.com/) with:
+Vous pouvez installer la version de développement depuis GitHub :
 
-``` r
+```{r}
 # install.packages("pak")
 pak::pak("sarahbiza82/sarah.biza.m1ecap")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(sarah.biza.m1ecap)
-## basic example code
+## Exemple
+```{r}
+head(spotify_wrapped_2025)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+```{r}
+streams_by_genre(spotify_wrapped_2025)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+plot_streams_by_genre(spotify_wrapped_2025)
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+```{r}
+filter_genre(spotify_wrapped_2025, "Pop")
+```
+
+```{r}
+filter_country_streams(spotify_wrapped_2025, "USA", min_streams = 1)
+```
+
+## Réponse à l’exercice Git
+
+```bash
+git checkout master
+git commit -m "commit A"
+git checkout -b feature
+git commit -m "commit B"
+git checkout master
+git commit -m "commit C"
+git merge feature
+```
+
+
+
