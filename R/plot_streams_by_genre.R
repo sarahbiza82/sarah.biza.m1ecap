@@ -1,8 +1,20 @@
 #' Graphique des streams moyens par genre
 #'
-#' @param data Le dataset spotify_wrapped_2025
+#' Cette fonction calcule et affiche les streams moyens par genre musical
+#' à partir du dataset Spotify Wrapped 2025.
 #'
-#' @return Un ggplot
+#' @param data Un data.frame contenant les données Spotify Wrapped 2025.
+#' Doit inclure au minimum les variables `primary_genre` et `streams`.
+#'
+#' @return Un objet ggplot2 représentant les streams moyens par genre,
+#' triés par ordre croissant et affichés horizontalement.
+#'
+#' @details La fonction repose sur `streams_by_genre()` pour agréger les données
+#' et calculer la moyenne des streams par genre.
+#'
+#' @examples
+#' plot_streams_by_genre(spotify_wrapped_2025)
+#'
 #' @export
 plot_streams_by_genre <- function(data) {
   summary <- streams_by_genre(data)
