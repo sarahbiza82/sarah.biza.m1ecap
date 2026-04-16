@@ -15,8 +15,35 @@ Il contient un jeu de données Spotify Wrapped 2025 ainsi que plusieurs fonction
 ## Installation
 
 Vous pouvez installer la version de développement depuis GitHub :
+```{r}
+# install.packages("devtools")
+devtools::install_github("sarahbiza82/sarah.biza.m1ecap")
+```
 
-```r
-# install.packages("pak")
-pak::pak("sarahbiza82/sarah.biza.m1ecap")
+## Exemple d'utilisation
 
+```{r}
+library(sarah.biza.m1ecap)
+
+head(spotify_wrapped_2025)
+
+streams_by_genre(spotify_wrapped_2025)
+
+plot_streams_by_genre(spotify_wrapped_2025)
+
+filter_genre(spotify_wrapped_2025, "Pop")
+
+filter_country_streams(spotify_wrapped_2025, "USA", min_streams = 1)
+```
+
+## Réponse à l’exercice Git
+
+```bash
+git checkout master
+git commit -m "commit A"
+git checkout -b feature
+git commit -m "commit B"
+git checkout master
+git commit -m "commit C"
+git merge feature
+```
