@@ -1,0 +1,32 @@
+---
+title: "spotify"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{spotify}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(sarah.biza.m1ecap)
+```
+
+```{r}
+head(spotify_wrapped_2025)
+```
+
+```{r}
+streams_by_genre(spotify_wrapped_2025)
+```
+
+```{r}
+plot_streams_by_genre(spotify_wrapped_2025)
+```
+
